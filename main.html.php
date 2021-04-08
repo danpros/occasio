@@ -31,7 +31,11 @@
 	</figure>
 	<?php endif;?>
 	<header class="post-header entry-header">
+		<?php if(!empty($p->link)){ ?>
+		<h2 class="post-title entry-title post-link"><a href="<?php echo $p->link;?>" target="_blank"><?php echo $p->title;?></a></h2>
+		<?php } else { ?>
 		<h2 class="post-title entry-title"><a href="<?php echo $p->url;?>" rel="bookmark"><?php echo $p->title;?></a></h2>
+		<?php } ?>
 		<div class="entry-meta">
 			<div class="entry-categories"> <?php echo $p->category;?></div>
 			<span class="posted-on"><a href="<?php echo $p->url;?>" rel="bookmark"><time class="entry-date published"><?php echo format_date($p->date);?></time></a></span>

@@ -4053,3 +4053,10 @@ body.wide-theme-layout .site .site-footer {
 	margin-top:0;
 }
 
+.post-link a:after {
+    font-family: "Genericons";
+    content: "\f442";
+    position: relative;
+    top: 3px;
+    font-weight: normal;
+}
