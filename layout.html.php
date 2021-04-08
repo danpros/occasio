@@ -12,22 +12,29 @@
 	<link rel="stylesheet" href="<?php echo site_url();?>themes/occasio/css/style.css" type="text/css" media="all">
 	<script type="text/javascript" src="<?php echo site_url();?>themes/occasio/js/jquery.js" id="jquery-core-js"></script>
 </head>
-<?php $occasioClass = '';
-if (is_index()) {
-	if (isset($is_front) && config('static.frontpage') === 'true') {
-			$occasioClass = 'no-sidebar single';
-	} else {
-		if (config('teaser.type') === 'full') {
-			$occasioClass = 'has-sidebar blog-layout-one-column-grid';
+<?php
+	$occasioClass = '';
+	if (is_index()) {
+		if (isset($is_front) && config('static.frontpage') === 'true') {
+				$occasioClass = 'no-sidebar single';
 		} else {
-			$occasioClass = 'has-sidebar blog-layout-two-column-grid';
+			if (config('teaser.type') === 'full') {
+				$occasioClass = 'has-sidebar blog-layout-one-column-grid';
+			} else {
+				$occasioClass = 'has-sidebar blog-layout-two-column-grid';
+			}
 		}
+	} elseif (isset($is_page) || isset($is_subpage)) {
+		$occasioClass = 'no-sidebar single';
+	} else {
+		$occasioClass = 'has-sidebar single';	
 	}
-} elseif (isset($is_page) || isset($is_subpage)) {
-	$occasioClass = 'no-sidebar single';
-} else {
-	$occasioClass = 'has-sidebar single';	
-}
+    
+    if (isset($_GET['search'])) {
+        $search = _h($_GET['search']);
+        $url = site_url() . 'search/' . remove_accent($search);
+        header("Location: $url");
+    }
 ?>
 <body class="centered-theme-layout <?php echo $occasioClass;?> hfeed">
 <?php if (facebook()) { echo facebook(); } ?>

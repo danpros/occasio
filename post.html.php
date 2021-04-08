@@ -1,3 +1,4 @@
+<?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <article class="tz-magazine-post post type-post hentry">
 	<?php if (!empty($p->image)) :?>
 	<figure class="post-image">

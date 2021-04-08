@@ -1,3 +1,4 @@
+<?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <article class="tz-magazine-post post hentry">	
 	<header class="post-header entry-header">
 		<h1 class="post-title entry-title">Page not found!</h1>

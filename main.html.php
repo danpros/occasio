@@ -1,3 +1,4 @@
+<?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <?php foreach ($posts as $p):?>
 <?php $img = get_image($p->body);?>
 <article class="tz-magazine-post post type-post status-publish format-standard has-post-thumbnail hentry">
