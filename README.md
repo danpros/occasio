@@ -6,8 +6,8 @@ WordPress Occasio theme ported to HTMLy.
  -  Rename the extracted folder to `occasio`.
  -  Activate it from HTMLy panel.
  
-## Featured post
-Post with `featured` tag automatically displayed as frontpage slider.
+## Grid layout
+Choose `Summary` under `Blog posts displayed as` in `Config > Reading Settings`. 
 
 ## License
 
