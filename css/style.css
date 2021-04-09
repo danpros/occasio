@@ -3906,6 +3906,13 @@ figcaption,
 	.wp-block-group.has-background {
 		padding: 1.75rem;
 	}
+	
+	.pagination {
+		float:left;
+		width:100%;
+		position:relative;
+	}	
+	
 }
 
 /* Columns Block */
