@@ -47,7 +47,7 @@
 	<symbol id="icon-facebook" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></symbol>
 	<symbol viewBox="0 0 16 16" id="icon-feed"><title>feed</title>  <g enable-background="new"> <path d="M2,6v2c3.3,0,6,2.7,6,6h2C10,9.6,6.4,6,2,6z M2,2v2c5.5,0,10,4.5,10,10h2C14,7.4,8.6,2,2,2z M3.5,11C2.7,11,2,11.7,2,12.5S2.7,14,3.5,14S5,13.3,5,12.5S4.3,11,3.5,11z"/> </g> </symbol>
 </svg>
-	
+
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 		<header id="masthead" class="site-header" role="banner">
@@ -68,9 +68,15 @@
 				</div><!-- .primary-navigation -->
 			</div><!-- .header-main -->
 		</header><!-- #masthead -->
-		
+
 		<div id="content" class="site-content">
 			<main id="main" class="site-main" role="main">
+
+				<?php if (!empty($breadcrumb)): ?>
+					<div class="breadcrumbs tzwb-clearfix">
+						<?php echo $breadcrumb ?>
+					</div>
+				<?php endif;?>
 
 				<?php if (isset($is_category)):?>
 					<header class="entry-header"><h1 class="entry-title"><?php echo i18n('Category');?>: <?php echo $category->title;?></h1><div class="taxonomy-description"><?php echo $category->body;?></div></header>
@@ -89,7 +95,7 @@
 				<?php endif;?>
 				<?php if (isset($is_blog)):?>
 					<header class="entry-header"><h1 class="entry-title">Blog</h1></header>
-				<?php endif;?>			
+				<?php endif;?>
 				
 				<div id="post-wrapper" class="post-wrapper">
 					<?php echo content();?>
@@ -98,8 +104,7 @@
 			</main><!-- #main -->
 
 			<section id="secondary" class="sidebar widget-area" role="complementary">
-			
-			
+
 				<div id="tzwb-social-icons" class="widget tzwb-social-icons">
 				<h3 class="widget-title">Stay in Touch</h3>
 					<div class="tzwb-content tzwb-clearfix">
@@ -114,7 +119,7 @@
 						</ul>
 					</div>
 				</div>
-				
+
 				<?php if (!isset($is_front) && !isset($is_blog)):?>
 				<div id="tzwb-recent-posts" class="widget tzwb-recent-posts">
 					<h3 class="widget-title"><?php echo i18n("Recent_posts");?></h3>
@@ -123,7 +128,7 @@
 					</div>
 				</div>
 				<?php endif;?>
-				
+
 				<?php if (config('views.counter') === 'true') :?>
 				<?php if (isset($is_front) || isset($is_blog)):?>
 				<div id="tzwb-popular-posts" class="widget tzwb-popular-posts">
@@ -134,7 +139,7 @@
 				</div>
 				<?php endif;?>
 				<?php endif;?>
-				
+
 				<?php if (disqus()): ?>
 				<section id="tzwb-recent-comments" class="widget tzwb-recent-comments">
 					<h3 class="widget-title">Recent Comments</h3>
@@ -180,7 +185,7 @@
 
 					</div>
 				</div>
-				
+
 				<div id="search-widget" class="widget widget_search">
 				<h3 class="widget-title">Search blog</h3>
 					<form role="search" class="search-form" >
@@ -211,7 +216,7 @@
 		</div>
 
 	</div><!-- #page -->
-	
+
 	<script type="text/javascript">
 	/* <![CDATA[ */
 	var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
