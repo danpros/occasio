@@ -31,7 +31,7 @@
 		<div class="entry-meta">
 			<div class="entry-categories"> <?php echo $p->category;?></div>
 			<span class="posted-on"><a href="<?php echo $p->url;?>" rel="bookmark"><time class="entry-date published"><?php echo format_date($p->date);?></time></a></span>
-			<span class="author"><a class="url" href="<?php echo $p->authorUrl;?>"><?php echo $p->author;?></a></span>
+			<span class="author"><a class="url" href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a></span>
 			<?php if (disqus_count()) { ?> 
 				<span><i class="fa fa-comments"></i> <a href="<?php echo $p->url ?>#disqus_thread"> comments</a></span>
 			<?php } elseif (facebook()) { ?> 

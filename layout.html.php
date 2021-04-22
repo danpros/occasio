@@ -207,9 +207,9 @@
 		<div class="footer-wrap">
 			<footer id="colophon" class="site-footer">
 			<div id="footer-line" class="site-info">
-				<style>.credit-link p {margin:0; display:inline-block;text-align:center;margin-right:5px;font-size:14px;}</style>
+				<style>.credit-link span {text-align:center;font-size:14px;}</style>
 				<div class="credit-link">
-					<?php echo copyright();?><p>Design by <a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a></p>
+					<?php echo copyright();?> <span>Design by <a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a></span>
 				</div>
 			</div>
 			</footer><!-- #colophon -->
