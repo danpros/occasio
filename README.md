@@ -3,7 +3,6 @@ WordPress Occasio theme ported to HTMLy.
 
 ## Installations 
  -  Upload and extract the zip file into themes directory.
- -  Rename the extracted folder to `occasio`.
  -  Activate it from HTMLy panel.
  
 ## Grid layout

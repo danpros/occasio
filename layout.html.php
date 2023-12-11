@@ -1,6 +1,6 @@
 <?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <!doctype html>
-<html lang="<?php echo str_replace('_', '-', config('language'));?>">
+<html lang="<?php echo blog_language;?>">
 <head>
     <?php echo head_contents();?>
     <title><?php echo $title;?></title>
@@ -8,9 +8,9 @@
     <link rel="canonical" href="<?php echo $canonical; ?>" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" id="genericons-css"  href="<?php echo site_url();?>themes/twentysixteen/genericons/genericons.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="<?php echo site_url();?>themes/occasio/css/style.css" type="text/css" media="all">
-	<script type="text/javascript" src="<?php echo site_url();?>themes/occasio/js/jquery.js" id="jquery-core-js"></script>
+	<link rel="stylesheet" id="genericons-css"  href="<?php echo theme_path();?>genericons/genericons.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="<?php echo theme_path();?>css/style.css" type="text/css" media="all">
+	<script type="text/javascript" src="<?php echo theme_path();?>js/jquery.js" id="jquery-core-js"></script>
 </head>
 <?php
 	$occasioClass = '';
@@ -29,12 +29,7 @@
 	} else {
 		$occasioClass = 'has-sidebar single';	
 	}
-    
-    if (isset($_GET['search'])) {
-        $search = _h($_GET['search']);
-        $url = site_url() . 'search/' . remove_accent($search);
-        header("Location: $url");
-    }
+
 ?>
 <body class="centered-theme-layout <?php echo $occasioClass;?> hfeed">
 <?php if (facebook()) { echo facebook(); } ?>
@@ -222,7 +217,7 @@
 	var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
 	/* ]]> */
 	</script>
-	<script type="text/javascript" src="<?php echo site_url();?>themes/occasio/js/custom.js" id="custom-js"></script>
+	<script type="text/javascript" src="<?php echo theme_path();?>js/custom.js" id="custom-js"></script>
 	<?php if (analytics()): ?><?php echo analytics() ?><?php endif; ?>
 </body>
 </html>
