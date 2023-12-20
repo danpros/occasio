@@ -154,17 +154,7 @@
 
 						<div id="tzwb-tabbed-content-1-tab-0" class="tzwb-tabcontent" style="">
 							<ul class="tzwb-tabcontent-archives">
-								<?php $data = archive_list(true);
-								foreach ($data as $year => $months) {
-									$by_month = array_count_values($months);
-									# Sort the months
-									krsort($by_month);
-									foreach ($by_month as $month => $count) {
-									$name = format_date(mktime(0, 0, 0, $month, 1, 2010), 'F');
-									echo '<li class="item"><a href="' . site_url() . 'archive/' . $year . '-' . $month . '">' . $name . ' ' . $year .'</a> ('.$count.')</li>';
-									}
-								}
-								?>
+								<?php echo archive_list('month-year');?>
 							</ul>
 						</div>
 
