@@ -33,9 +33,9 @@
 			<span class="posted-on"><a href="<?php echo $p->url;?>" rel="bookmark"><time class="entry-date published"><?php echo format_date($p->date);?></time></a></span>
 			<span class="author"><a class="url" href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a></span>
 			<?php if (disqus_count()) { ?> 
-				<span><i class="fa fa-comments"></i> <a href="<?php echo $p->url ?>#disqus_thread"> comments</a></span>
+				<span><i class="fa fa-comments"></i> <a href="<?php echo $p->url ?>#disqus_thread"> <?php echo i18n('Comments');?></a></span>
 			<?php } elseif (facebook()) { ?> 
-				<span><i class="fa fa-comments"></i> <a href="<?php echo $p->url ?>#comments"><span><fb:comments-count href=<?php echo $p->url ?>></fb:comments-count> comments</span></a></span>
+				<span><i class="fa fa-comments"></i> <a href="<?php echo $p->url ?>#comments"><span><fb:comments-count href=<?php echo $p->url ?>></fb:comments-count> <?php echo i18n('Comments');?></span></a></span>
 			<?php } ?>
 			<?php if (login()) { echo ' <span class="edit-post"><a href="'. $p->url .'/edit?destination=post">Edit</a></span>'; } ?>
 		</div>
@@ -45,7 +45,7 @@
 	<?php echo $p->body; ?>	
 	</div><!-- .entry-content -->
 
-	<div class="entry-tags"><span class="entry-tags-label screen-reader-text">Tags</span><?php echo $p->tag;?></div>
+	<div class="entry-tags"><span class="entry-tags-label screen-reader-text"><?php echo i18n('Tags');?></span><?php echo $p->tag;?></div>
 
 </article>
 
@@ -53,10 +53,10 @@
 	<h2 class="screen-reader-text">Post navigation</h2>
 	<div class="nav-links">
 		<?php if (!empty($prev)): ?>
-		<div class="nav-previous"><a href="<?php echo($prev['url']); ?>" rel="prev"><span class="nav-link-text">Previous Post</span><h3 class="entry-title"><?php echo($prev['title']); ?></h3></a></div>
+		<div class="nav-previous"><a href="<?php echo($prev['url']); ?>" rel="prev"><span class="nav-link-text"><?php echo i18n('Prev_post');?></span><h3 class="entry-title"><?php echo($prev['title']); ?></h3></a></div>
 		<?php endif;?>
 		<?php if (!empty($next)): ?>
-		<div class="nav-next"><a href="<?php echo($next['url']); ?>" rel="next"><span class="nav-link-text">Next Post</span><h3 class="entry-title"><?php echo($next['title']); ?></h3></a></div>
+		<div class="nav-next"><a href="<?php echo($next['url']); ?>" rel="next"><span class="nav-link-text"><?php echo i18n('Next_post');?></span><h3 class="entry-title"><?php echo($next['title']); ?></h3></a></div>
 		<?php endif;?>
 	</div>
 </nav>
@@ -70,7 +70,7 @@
 
 <?php if (facebook() || disqus()): ?>
 <div id="comments" class="comments-area">
-	<h3 id="reply-title" class="comment-reply-title">Leave a Reply</h3>
+	<h3 id="reply-title" class="comment-reply-title"><?php echo i18n('Comments');?></h3>
     <?php if (facebook()): ?>
         <div class="fb-comments" data-href="<?php echo $p->url ?>" data-numposts="<?php echo config('fb.num') ?>" data-colorscheme="<?php echo config('fb.color') ?>"></div>
     <?php endif; ?>

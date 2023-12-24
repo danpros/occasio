@@ -77,13 +77,13 @@
 					<header class="entry-header"><h1 class="entry-title"><?php echo i18n('Category');?>: <?php echo $category->title;?></h1><div class="taxonomy-description"><?php echo $category->body;?></div></header>
 				<?php endif;?>
 				<?php if (isset($is_tag)):?>
-					<header class="entry-header"><h1 class="entry-title">Tag: <?php echo $tag->title;?></h1></header>
+					<header class="entry-header"><h1 class="entry-title"><?php echo i18n('Tags');?>: <?php echo $tag->title;?></h1></header>
 				<?php endif;?>
 				<?php if (isset($is_archive)):?>
-					<header class="entry-header"><h1 class="entry-title">Archive: <?php echo $archive->title;?></h1></header>
+					<header class="entry-header"><h1 class="entry-title"><?php echo i18n('Archives');?>: <?php echo $archive->title;?></h1></header>
 				<?php endif;?>
 				<?php if (isset($is_search)):?>
-					<header class="entry-header"><h1 class="entry-title">Search: <?php echo $search->title;?></h1></header>
+					<header class="entry-header"><h1 class="entry-title"><?php echo i18n('Search');?>: <?php echo $search->title;?></h1></header>
 				<?php endif;?>
 				<?php if (isset($is_type)):?>
 					<header class="entry-header"><h1 class="entry-title">Type: <?php echo ucfirst($type->title);?></h1></header>
@@ -101,7 +101,6 @@
 			<section id="secondary" class="sidebar widget-area" role="complementary">
 
 				<div id="tzwb-social-icons" class="widget tzwb-social-icons">
-				<h3 class="widget-title">Stay in Touch</h3>
 					<div class="tzwb-content tzwb-clearfix">
 						<ul id="menu-social-icons" class="tzwb-social-icons-menu social-icons-menu menu">
 							<?php if(!empty(config('social.twitter'))):?>							
@@ -137,7 +136,7 @@
 
 				<?php if (disqus()): ?>
 				<section id="tzwb-recent-comments" class="widget tzwb-recent-comments">
-					<h3 class="widget-title">Recent Comments</h3>
+					<h3 class="widget-title"><?php echo i18n('Comments');?></h3>
 					<script src="//<?php echo config('disqus.shortname');?>.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=0&amp;avatar_size=48&amp;excerpt_length=200&amp;hide_mods=0" type="text/javascript"></script><style>li.dsq-widget-item {padding-top:15px;} img.dsq-widget-avatar {margin-right:5px;} ul.dsq-widget-list {padding-left:0px}</style>
 				</section>
 				<?php endif;?>
@@ -148,7 +147,7 @@
 							<ul class="tzwb-tabnavi">
 								<li><a href="#tzwb-tabbed-content-1-tab-0" class="current-tab"><?php echo i18n("Archives");?></a></li>
 								<li><a href="#tzwb-tabbed-content-1-tab-1"><?php echo i18n('Category');?></a></li>
-								<li><a href="#tzwb-tabbed-content-1-tab-2">Tags</a></li>
+								<li><a href="#tzwb-tabbed-content-1-tab-2"><?php echo i18n('Tags');?></a></li>
 							</ul>
 						</div>
 
@@ -172,15 +171,15 @@
 				</div>
 
 				<div id="search-widget" class="widget widget_search">
-				<h3 class="widget-title">Search blog</h3>
+				<h3 class="widget-title"><?php echo i18n('Search');?></h3>
 					<form role="search" class="search-form" >
 						<label>
-							<span class="screen-reader-text">Search for:</span>
-							<input type="search" class="search-field" placeholder="Search …" name="search" title="Search for:">
+							<span class="screen-reader-text"><?php echo i18n('Search_for');?></span>
+							<input type="search" class="search-field" placeholder="<?php echo i18n('Search_for');?> …" name="search" title="<?php echo i18n('Search_for');?>">
 						</label>
 						<button type="submit" class="search-submit">
 							<svg class="icon icon-search" aria-hidden="true" role="img"> <use xlink:href="#search"></use> </svg>
-							<span class="screen-reader-text">Search</span>
+							<span class="screen-reader-text"><?php echo i18n('Search');?></span>
 						</button>
 					</form>
 				</div>

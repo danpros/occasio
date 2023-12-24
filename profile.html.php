@@ -5,7 +5,7 @@
 	</header><!-- .entry-header -->
 	<div class="entry-content entry-excerpt">
 	<?php echo $about; ?>
-	<h3 class="post-index">Posts by this author</h3>
+	<h3 class="post-index"><?php echo i18n('Post_by_author');?></h3>
 	<?php if (!empty($posts)) { ?>
 		<ul class="post-list">
 			<?php foreach ($posts as $p): ?>
