@@ -3410,16 +3410,25 @@ figcaption,
 	list-style: none;
 }
 
-.tzwb-social-icons .social-icons-menu li a {
+.tzwb-social-icons .social-icons-menu li a, .social-logo a {
 	display: block;
 	margin: 2px 2px 0 0;
-	padding: 0.5rem 0.75rem 0.75rem;
+	padding: 0.70rem;
 	background-color: #2a4861;
 	background-color: var(--button-color);
 }
 
+.social-logo a {
+	margin: 2px 2px 0 0!important;
+	line-height:1;
+	color: var(--button-text-color);
+	text-decoration: none;
+}
+
 .tzwb-social-icons .social-icons-menu li a:hover,
-.tzwb-social-icons .social-icons-menu li a:active {
+.tzwb-social-icons .social-icons-menu li a:active,
+.social-logo a:hover,
+.social-logo a:active {
 	background-color: #5d7b94;
 	background-color: var(--button-hover-color);
 	text-decoration: none;

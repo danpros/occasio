@@ -102,15 +102,7 @@
 
 				<div id="tzwb-social-icons" class="widget tzwb-social-icons">
 					<div class="tzwb-content tzwb-clearfix">
-						<ul id="menu-social-icons" class="tzwb-social-icons-menu social-icons-menu menu">
-							<?php if(!empty(config('social.twitter'))):?>							
-							<li class="menu-item"><a href="<?php echo config('social.twitter');?>"><span class="screen-reader-text">Twitter</span><svg class="icon icon-twitter" aria-hidden="true" role="img"> <use xlink:href="#icon-twitter"></use> </svg></a></li>
-							<?php endif;?>
-							<?php if(!empty(config('social.facebook'))):?>
-							<li class="menu-item"><a href="<?php echo config('social.facebook');?>"><span class="screen-reader-text">Facebook</span><svg class="icon icon-facebook" aria-hidden="true" role="img"> <use xlink:href="#icon-facebook"></use> </svg></a></li>
-							<?php endif;?>
-							<li class="menu-item"><a href="<?php echo site_url();?>feed/rss"><span class="screen-reader-text">Feed</span><svg class="icon icon-feed" aria-hidden="true" role="img"> <use xlink:href="#icon-feed"></use> </svg></a></li>
-						</ul>
+						<?php echo social();?>
 					</div>
 				</div>
 
@@ -193,7 +185,7 @@
 			<div id="footer-line" class="site-info">
 				<style>.credit-link span {text-align:center;font-size:14px;}</style>
 				<div class="credit-link">
-					<?php echo copyright();?> <span>Design by <a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a></span>
+					<?php echo copyright();?> <span style="float:right;">Design by <a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a></span>
 				</div>
 			</div>
 			</footer><!-- #colophon -->
