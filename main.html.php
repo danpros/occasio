@@ -8,7 +8,7 @@
 			<img src="<?php echo $p->image;?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="<?php echo $p->title;?>" loading="lazy" width="100%"/>
 		</a>
 	</figure>
-	<?php } elseif (!empty($img) && empty($p->quote) && config('teaser.type') === 'trimmed') { ?>
+	<?php } elseif (!empty($img) && empty($p->quote) && empty($p->video) && empty($p->audio) && config('teaser.type') === 'trimmed') { ?>
 	<figure class="post-image">
 		<a class="wp-post-image-link" href="<?php echo $p->url;?>" rel="bookmark" aria-hidden="true">
 			<img src="<?php echo $img;?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="<?php echo $p->title;?>" loading="lazy" width="100%"/>			
