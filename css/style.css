@@ -4084,3 +4084,7 @@ body.wide-theme-layout .site .site-footer {
 .breadcrumbs a:hover {
 	text-decoration:underline;
 }
+
+.toc a {
+	text-decoration:none;
+}

@@ -44,12 +44,13 @@
 	<div class="entry-content entry-excerpt">
 	<?php echo $p->body; ?>	
 	</div><!-- .entry-content -->
-
 	<div class="entry-tags"><span class="entry-tags-label screen-reader-text"><?php echo i18n('Tags');?></span><?php echo $p->tag;?></div>
 
 </article>
 
 <nav class="navigation post-navigation" role="navigation" aria-label="Posts">
+	<div class="related-posts"><style>.related-posts span{relative;display: inline-block;} .related-posts ul {margin-top:10px;}.related-posts a {text-decoration:none}</style><span class="nax-link-text"><?php echo i18n("related_posts");?></span>
+	<?php echo get_related($p->related);?></div>
 	<h2 class="screen-reader-text">Post navigation</h2>
 	<div class="nav-links">
 		<?php if (!empty($prev)): ?>
