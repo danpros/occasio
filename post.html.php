@@ -37,7 +37,7 @@
 			<?php } elseif (facebook()) { ?> 
 				<span><i class="fa fa-comments"></i> <a href="<?php echo $p->url ?>#comments"><span><fb:comments-count href=<?php echo $p->url ?>></fb:comments-count> <?php echo i18n('Comments');?></span></a></span>
 			<?php } ?>
-			<?php if (login()) { echo ' <span class="edit-post"><a href="'. $p->url .'/edit?destination=post">Edit</a></span>'; } ?>
+			<?php if (authorized($p)) { echo ' <span class="edit-post"><a href="'. $p->url .'/edit?destination=post">Edit</a></span>'; } ?>
 		</div>
 	</header><!-- .entry-header -->
 
