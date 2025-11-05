@@ -4,8 +4,7 @@
 <head>
     <?php echo head_contents();?>
     <?php echo $metatags;?>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="<?php echo theme_path();?>css/barlow.css" rel="stylesheet">
     <link rel="stylesheet" id="genericons-css"  href="<?php echo theme_path();?>genericons/genericons.css" type="text/css" media="all" />
     <link rel="stylesheet" href="<?php echo theme_path();?>css/style.css" type="text/css" media="all">
     <script type="text/javascript" src="<?php echo theme_path();?>js/jquery.js" id="jquery-core-js"></script>
@@ -135,26 +134,26 @@
 					<div class="tzwb-content tzwb-clearfix">
 						<div class="tzwb-tabnavi-wrap tzwb-clearfix">
 							<ul class="tzwb-tabnavi">
-								<li><a href="#tzwb-tabbed-content-1-tab-0" class="current-tab"><?php echo i18n("Archives");?></a></li>
-								<li><a href="#tzwb-tabbed-content-1-tab-1"><?php echo i18n('Category');?></a></li>
-								<li><a href="#tzwb-tabbed-content-1-tab-2"><?php echo i18n('Tags');?></a></li>
+								<li><a href="#tzwb-tabbed-content-1-tab-0" class="current-tab"><?php echo i18n('Category');?></a></li>
+								<li><a href="#tzwb-tabbed-content-1-tab-1"><?php echo i18n('Tags');?></a></li>
+								<li><a href="#tzwb-tabbed-content-1-tab-2"><?php echo i18n("Archives");?></a></li>
 							</ul>
 						</div>
 
 						<div id="tzwb-tabbed-content-1-tab-0" class="tzwb-tabcontent" style="">
-							<ul class="tzwb-tabcontent-archives">
-								<?php echo archive_list('month-year');?>
-							</ul>
-						</div>
-
-						<div id="tzwb-tabbed-content-1-tab-1" class="tzwb-tabcontent" style="display: none;">
 							<?php echo category_list();?>
 						</div>
 
-						<div id="tzwb-tabbed-content-1-tab-2" class="tzwb-tabcontent" style="display: none;">
+						<div id="tzwb-tabbed-content-1-tab-1" class="tzwb-tabcontent" style="display: none;">
 							<div class="tzwb-tabcontent-tagcloud widget_tag_cloud">
 								<div class="tagcloud"><?php echo tag_cloud();?></div>
 							</div>
+						</div>
+						
+						<div id="tzwb-tabbed-content-1-tab-2" class="tzwb-tabcontent" style="display: none;">
+							<ul class="tzwb-tabcontent-archives">
+								<?php echo archive_list('month-year');?>
+							</ul>
 						</div>
 
 					</div>
